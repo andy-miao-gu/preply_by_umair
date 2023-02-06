@@ -1,0 +1,1 @@
+import printing_functionsfrom printing_functions import fun1,fun2from printing_functions import fun1 as fximport printing_functions as pffrom printing_functions import *printing_functions.fun1("world")fun1("ümair")fx("orange")pf.fun1("tt")fun1("yu")fun2("coa")
