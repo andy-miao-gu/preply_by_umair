@@ -1,6 +1,10 @@
 import sys
 import pygame
 from setting import Settings
+from setting import Ship
+import game_functions as gf
+
+
 
 
 
@@ -12,16 +16,19 @@ def run_game():
     
     screen = pygame.display.set_mode(
         (ai_settings.screen_width, ai_settings.screen_height))
-    pygame.display.set_caption("Alien Invasion")
+    ship = Ship(screen)
+    pygame.display.set_caption("Andy and Mr. Umair's Rocket game")
     bg_color = (30,67,78)
     # Start the main loop for the game.
     while True:
+        gf.check_events(ship)
         # Watch for keyboard and mouse events.
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 sys.exit()
         # Make the most recently drawn screen visible.
-        pygame.display.flip()
-        screen.fill(ai_settings.bg_color)
+        gf.update_screen(ai_settings, screen, ship)
+       
+            
 run_game()
 
