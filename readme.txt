@@ -1,4 +1,0 @@
-andy
-angela
-japan
-python
